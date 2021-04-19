@@ -6,7 +6,7 @@
 \ CRSE: CS F331 - Programming Languages
 \ PROF: Glenn G. Chappell
 \ STRT: 16 April 2021
-\ UPDT: N/A
+\ UPDT: 17 April 2021
 \ VERS: 1.0
 
 \ collstep
@@ -34,7 +34,8 @@
 \ collcount
 : collcount ( n -- c )
   dup 0<= if
-    drop 0
+    drop
+    0
   else
     0 colldist
   endif
