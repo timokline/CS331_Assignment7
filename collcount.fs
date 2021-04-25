@@ -6,11 +6,11 @@
 \ CRSE: CS F331 - Programming Languages
 \ PROF: Glenn G. Chappell
 \ STRT: 16 April 2021
-\ UPDT: 17 April 2021
+\ UPDT: 25 April 2021
 \ VERS: 1.0
 
 \ collstep
-\ From word.fs
+\ From the class Github - word.fs
 : collstep { n -- n_1 }
   n 2 mod 0= if
     n 2 /
@@ -19,8 +19,9 @@
   endif
 ;
 
-
 \ colldist
+\ Recursively walks through the collatz conjecture until it reaches 1
+\ Increments the number of steps to get to 1 from n
 : colldist ( n c -- c )
   swap dup 1 = if \ BASE CASE, returns the count
     drop
@@ -32,11 +33,12 @@
 ;
 
 \ collcount
+\ Calculates the collatz distance to get from n->1
 : collcount ( n -- c )
-  dup 0<= if
+  dup 0<= if \ not nonzero, return 0
     drop
     0
-  else
+  else \ calculate the collatz distance
     0 colldist
   endif
 ;
