@@ -8,6 +8,8 @@
 % STRT: 16 April 2021
 % UPDT: 25 April 2021
 % VERS: 1.0
+% SRCS: http://www.cs.otago.ac.nz/cosc347/References/LP/Code/Collatz.html
+
 
 % collatz(+n, ?c)
 % Even case for the collatz
